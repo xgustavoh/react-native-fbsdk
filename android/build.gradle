@@ -4,7 +4,7 @@ def DEFAULT_COMPILE_SDK_VERSION             = 28
 def DEFAULT_BUILD_TOOLS_VERSION             = "28.0.3"
 def DEFAULT_MIN_SDK_VERSION                 = 16
 def DEFAULT_TARGET_SDK_VERSION              = 28
-def DEFAULT_SUPPORT_LIB_VERSION             = "28.0.0"
+def DEFAULT_SUPPORT_LIB_VERSION             = "1.0.2"
 def DEFAULT_FACEBOOK_SDK_VERSION            = "4.38.1"
 
 def SUPPORT_LIB_VERSION = rootProject.hasProperty('supportLibVersion') ? rootProject.supportLibVersion : DEFAULT_SUPPORT_LIB_VERSION
@@ -27,7 +27,7 @@ android {
 }
 
 dependencies {
-    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "androidx.appcompat:appcompat:${SUPPORT_LIB_VERSION}"
     api 'com.facebook.react:react-native:+' // support react-native-v0.22-rc+
     api "com.facebook.android:facebook-android-sdk:${FACEBOOK_SDK_VERSION}"
 }
